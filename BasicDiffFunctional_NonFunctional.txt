@@ -1,0 +1,19 @@
+Basic differences in NonFunctional and Functional Requirements
+
+
+
+Functional Requirements				Non Functional Requirements
+Product Features			Product Property
+
+Descrive the actions with which the	Describe the experience of the user while 
+user work is concerned			doing the work
+
+A functions that can be captured in 	Non-functional requirements are global constraints on a software system 
+use case				that results in development costs, operational costs
+
+A behaviour that can be analyzed by 	Often known as software qualities
+drawning sequence diagrams, state
+charts, etc.
+
+Can be traced to individual set of 	Usually can not be implemented in a single module of a program
+					a program

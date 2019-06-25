@@ -1,0 +1,67 @@
+
+
+Functional vs Non Functional Requirements
+
+If there is any one thing any project must have in order not to be doomed to failure, that is a sensible and comprehensive collection of both the functional and non-functional requirements.
+
+Any project’s requirements need to be well thought out, balanced and clearly understood by all involved, but perhaps of most importance is that they are not dropped or compromised halfway through the project.
+
+However, what exactly is the difference between ‘functional’ and ‘non functional’ requirements?
+
+It’s not that complex, and once you understand the difference, the definition will be clear.
+
+The official definition of ‘a functional requirement’ is that it essentially specifies something the system should do.
+
+Typically, functional requirements will specify a behaviour or function,
+for example:
+“Display the name, total size, available space and format of a flash drive connected to the USB port.”
+Other examples are “add customer” and “print invoice”.
+
+
+Some of the more typical functional requirements include:
+
+	Business Rules
+	Transaction corrections, adjustments and cancellations
+	Administrative functions
+	Authentication
+	Authorization levels
+	Audit Tracking
+	External Interfaces
+	Certification Requirements
+	Reporting Requirements
+	Historical Data
+	Legal or Regulatory Requirements
+
+
+
+The difference is that non-functional requirements describe how the system works, while functional requirements describe what the system should do.
+
+The definition for a non-functional requirement is that it essentially specifies how the system should behave and that it is a constraint upon the systems behaviour. One could also think of non-functional requirements as quality attributes for of a system.
+
+
+Non-functional requirements cover all the remaining requirements which are not covered by the functional requirements. They specify criteria that judge the operation of a system, rather than specific behaviours, for example: “Modified data in a database should be updated for all users accessing it within 2 seconds.”
+
+Some typical non-functional requirements are:
+
+	Performance – for example Response Time, Throughput, Utilization, Static Volumetric
+	Scalability
+	Capacity
+	Availability
+	Reliability
+	Recoverability
+	Maintainability
+	Serviceability
+	Security
+	Regulatory
+	Manageability
+	Environmental
+	Data Integrity
+	Usability
+	Interoperability
+
+
+Non-functional requirements specify the system’s ‘quality characteristics’ or ‘quality attributes’.
+
+Many different stakeholders have a vested interest in getting the non-functional requirements right particularly in the case of large systems where the buyer of the system is not necessarily also the user of the system.
+
+

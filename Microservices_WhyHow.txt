@@ -1,0 +1,364 @@
+
+Cloud Computing  ---- 2 Days
+Git & containers -----2 Day
+Microservices	 -----1 Day
+DevOps		 ----- 1 Day
+
+
+
+https://github.com/GoogleCloudPlatform/microservices-demo
+
+
+Complexity comes from low cohesion and high coupling. 
+Microservices provides the structure to keep that at bay.
+
+
+E-Commerce Modernization: Context
+
+Customer experience is becoming truly omni-channel, contextual, and personalized. This puts new challenges in terms of availability and scalability of the website functionalities. Businesses need to be quick in preparing for the ever-changing environment and in their reaction to competition. eCommerce applications need to evolve to meet the challenges while supporting continuous delivery.
+
+The main drivers for the shift towards microservices are:
+
+1.Ability to quickly implement changes, quick deployments, and rollbacks
+2.Need for a responsive UI, real-time data, and immersive user experience
+3.Website’s unavailability could greatly impact revenue and reputation
+4.Need to scale up during sudden spikes
+5.Different features require different levels of availability and scalability
+6.Keeping the cost of operation low
+7.Omni-channel personalized experience (not supported out-of-the-box and difficult/slow to customize)
+
+
+E-Commerce Solutions
+
+Online and commerce solutions are often under the strain of seasonal fluctuations and fast changing customer needs and demands. 
+Traditional applications are not able to handles changes quickly and are required to be provisioned for peak traffic situations which increases the costs. It is a challenge to obtain feedback on new features to make decisions quickly.
+
+SaaS and Cloud Offerings of E-Commerce Platforms
+
+Although SaaS platforms can address some of the concerns such as cost and availability, retailers often need custom differentiating features and true omnichannel capabilities that are not supported through these platforms. Businesses want to run new experiments quickly or bring efficiency to a process that is typical to their organization. Cloud offerings of traditional e-commerce platforms also do not provide that flexibility.   
+
+Industry Trends
+
+Many of the Tier 1 retailers have been moving away from monolith eCommerce product platforms towards microservices, cloud, CI/CD and DevOps. 
+By doing this they have been able to have more control over quickly releasing features that are unique to their business vision. Others are going to follow the trend as the need for being quicker, omni-channel and available becomes critical to their competitiveness.
+
+Microservices for Enterprise Applications
+
+While microservices can be used for almost anything, the real driver is the ability to make quick change. For many Enterprise applications (such as Finance, HR etc.), focus is usually on stability than agility. However, there are certain enterprise applications which have started to transform (such as driving efficiency in WMS using ML/AI/IoT) and these might be good candidates to try microservices. Event driven design will help to seamlessly integrate with legacy applications.
+
+Approach to Microservices-Based E-Commerce
+
+Refactoring e-Commerce platforms to microservices is a long journey. Through planning ahead, following established architectural patterns and preparing the ecosystem before making major changes to a running system, this journey could be made quicker and risk-free.
+
+It is often a good idea to start exploring and building capabilities around Agile Delivery, Continuous Integration and Deployment, DevOps, 12-factor app design, DDD, cloud-native, polyglot programming as the foundational work for building microservices. Domain driven design is an evolving process and the microservices should be designed for easy refactoring.
+
+With DevOps, cloud-native design, and continuous integration and deployment in place, microservices can be run on-premise on private cloud or hybrid/public cloud. Public cloud is always a better choice for eCommerce application.
+
+Team Organization
+
+Decomposing a complex monolith into microservices requires identifying cohesive business functions and entities (domains) and model them in independent bounded contexts. This granular separation results in identifying microservices (and the teams). The teams are typically small with mixed skills in development and operations.
+
+
+
+12 factor app (twelve-factor app)
+
+Twelve-factor app is a methodology for building distributed applications that run in the cloud and are delivered as a service.
+
+12 factors developers should think about when building native cloud apps.
+
+
+1. Codebase. 
+
+  	Work from a single codebase that is tracked in revision control with multiple deployments.
+
+2. Dependencies. 
+
+  	Declare and isolate application dependencies.
+
+3. Configuration. 
+	Store the configuration in the environment and not within the application.
+
+4. Services. 
+	Treat services, such as databases, as attached external resources.
+
+5. Executions. 
+	Keep build and run executions separate.
+
+6. States. 
+	Execute an application as one or more stateless processes.
+
+7. Port binding. 
+	Export services via flexible port binding.
+
+8. Scalability. 
+	Scale horizontally 
+		-- replication of small containers 
+		-- and not vertically, with fewer bigger containers.
+9. Execution. 
+	Start applications fast, but perform a graceful shutdown when failing.
+
+10. Phases. 
+	Minimize differences among development, staging and production.
+
+11. Logs. 
+	Treat all logs as a single event stream.
+
+12. Admin tasks. 
+	Run admin and management tasks as one-off processes.
+
+
+
+In more detail
+
+1. Code base
+
+Use one codebase, even when building cross-platform apps. Address the needs of specific devices with version control. 
+
+A codebase (sometimes spelled as two words, code base) is the complete body of source code for a given software program or application. Source code is the version of a program that a programmer writes and saves as a file. After the code is compiled preparatory to running on a computer, the program exists as object code, which the computer understands but a human cannot without a great deal of difficulty. The source code is retained, either as a collection of files or in a source control repository, so that changes can be made as necessary throughout the software's supported life.
+
+
+2. Dependencies
+
+Explicitly declare and isolate all dependencies. 
+
+3. Configuration
+
+Don’t store config as constants in code. Instead, design the app to read its config from the environment.
+
+4. Backing Services
+
+Treat back-end services as attached resources to be accessed with a URL or other locator stored in config.
+
+5. Build, Release, Run
+
+Strictly separate build and run stages.
+
+6. Processes
+
+Execute the app as one or more stateless processes. Data that must be persistent should be stored in a stateful backing service.
+
+7. Port binding
+
+Use port binding to export services.
+
+8. Concurrency
+
+Scale out apps horizontally, not vertically. 
+
+9. Disposability
+
+Use fast startups and graceful shutdowns to maximize robustness.
+
+10. Parity
+
+Facilitate continuous deployment by ensuring that development, staging, and production environments are as similar as possible.
+
+11. Logs
+
+Treat logs as event streams. Logs should not be concerned with routing or storing the app’s output.
+
+12. Admin processes
+
+Run admin tasks as one-off processes from a machine in the production environment that’s running the latest production code.
+
+
+
+
+The 12-factor basics
+
+When a developer uses the twelve-factor app DevOps methodology, applications will have certain characteristics in common that address a variety of scenarios as an app scales. For example, the methodology recommends that apps use declarative formats for setup automation to assist new developers that enter the project at a later time.
+
+Apps should also be written to have maximum portability between execution environments. and scale easily without significant reworking. Twelve-factor apps can be written in any programming language and in combination with any back-end service, such as a database.
+
+The goal of the twelve-factor framework is to help developers build apps that use an architecture that ensures speed, reliability, agility, portability and ultimately results in a robust and reliable application.
+
+
+DevOps
+
+DevOps practices help build collaboration in the team and provide a framework required for 
+	automated, fast and frequent delivery by removing dependencies, handoffs and repeatable manual configuration.
+
+
+Microservices Framework
+
+It is recommended to use a microservices framework that can take care of cross-cutting concerns for services, such as
+
+1.Service Registry
+2.Service Routing and Filtering
+3.Access Token
+4.Circuit Breaker
+5.Client-side load balancer
+6.Instrumentation
+
+Additionally, choose a framework that is easy to be replaced/upgraded in parts and supports multiple platforms.
+
+
+Refactoring Sequence
+
+Typically, e-commerce platforms are componentized by layers (presentation, business, persistence etc) and not by functionality. This is often reflected in the data model which tightly couples different functional domains.
+
+Dependency on other components makes it difficult to refactor that component into a microservice. Usually, it is recommended to start by making the platform headless and building a new reactive UI layer over it.
+
+One of the risk mitigation strategies for large migration projects is to apply Strangler pattern in place of a complete cut-over. E-Commerce platforms are comprised of different modules such as Catalog, Cart, Promotions etc.
+
+The critical content/components need to be moved first to cloud for availability. The home page and browse/search pages have the maximum hits. This is usually followed by product description pages.
+
+Here is a list of domains (Use Cases) from eCommerce engines and a possible sequence for migrating them:
+
+1.Search
+2.Catalog
+3.Product Pricing
+4.Inventory
+5.Shipping
+6.Delivery
+7.Customer account
+8.Promotions
+9.Cart
+10.Associate facing tools
+
+
+While this is a typical sequence, the sequence should be driven by the criticality. It also helps to start small with a lean team. Also, it does not necessarily have to be a complete migration from the platform i.e. if an organization’s needs are fulfilled by just transforming some critical functions of the platform to microservices.
+
+To make the new services organize data and semantics within its bounded context, an anti-corruption layer is required to translate context while integrating with the legacy platform during the transition. An incremental journey can be adopted by a small team where only the critical functions are migrated to microservices first while building an interim architecture.
+
+With the monolith being split in different domain services, there will be a need to build materialized view comprised of data from different microservices. For instance, product catalog materialized view needs to be built and be kept updated based on product, price, inventory, promotion events. By keeping it event driven, we avoid coupling between services and also avoid latency. Different consumer applications would require their own materialized views based on individual need.
+
+Multiple levels of distributed cache and cache eviction through event-based subscription is recommended.
+
+The diagram below is the target architecture for microservices based e-commerce.
+
+
+
+
+Image title
+
+Challenges
+
+As eCommerce platform turns into services, the goal should be to make the services golden source of truth. There should not be channel specific inventory service, for instance. However, retail enterprises have traditionally been organized in a way that such a move would require synergy among a lot of teams with their own priorities. In the interim, it might be required to create copies with a roadmap for other teams to start using the service.
+
+Often the refactoring is done by a new team (with different skill sets). As a risk mitigation step, it might be required to implement some enhancements in both old and new platform (unless it is a new capability that can completely be implemented in a separate service that both old and new platforms can integrate to).
+
+Microservices increases the complexity of application management. Using a container platform is recommended. Microservices frameworks can help address cross-cutting concerns such as API Gateway, observability etc. Choose a framework that is easy to be replaced in parts and supports polyglot.
+
+
+
+What are microservices?
+
+Traditionally, organizations have architected their IT environments as large, monolithic entities. 
+The idea behind this is to make them too big to fail. However, preventing any IT failure is nearly impossible,and moreover, the way these entities are architected is not conducive to agility and cost-effectiveness. As a result, many IT services are going in a different direction. 
+Microservices are an architectural and organizational approach to software development where software is composed of small independent services that communicate over well-defined APIs. These services are owned by small, self-contained teams. This modularity lends itself to speed and flexibility, helping solve many of the problems created by monolithic architectures
+
+Challenges with monolithic architectures
+
+The monolithic on-premises architectures that enterprises have traditionally relied on are failing to deliver the agility and cost-effectiveness they need. Because all processes in a monolithic architecture are tightly coupled and run as a single service, scaling any component of the architecture means scaling the entire thing. Not only is this more time-consuming than scaling an individual component, it’s also significantly more expensive. As an application running on this kind of architecture changes, its code base becomes more complex, as does adding features. This ultimately hinders an organization’s ability to respond to their customers’ feedback and deliver new functionality.
+
+Microservices can help organizations overcome many of these challenges.
+
+How do microservices help you overcome these challenges?
+
+With a microservices architecture, an application is built as independent components that run each
+application process as a service. These services communicate via a well-defined interface using
+lightweight APIs. Two key capabilities enabled by microservices architectures are the ability to develop and deliver new features faster, and reduced costs. Let’s take a brief look at each.
+
+Because each component of an application is independent, apps can be managed by a series of teams,
+each with the autonomy to work on their own component when and how they see fit. Working on a
+single component does not impact the performance or availability of others. This flexibility can eliminate operational red tape that has long gotten in developers’ way and extended development cycles.
+
+And because each component can scale independently, you can right-size your infrastructure. Monolithic
+architectures scale up and down as one entity, meaning that if a single component experiences a spike
+in demand, more resources are added to the entire application. This typically leads to other components being over-provisioned. With microservices, each component can have exactly the resources it needs, which means less unused capacity that you have to pay for and ultimately, lower costs.
+
+
+What do you need to do to adopt microservices successfully?
+
+While implementing a microservices architecture is not a particularly long and arduous process, it does require that you make a few key decisions. You must also start to think differently about a few aspects of development.
+
+Decide on your combination of serverless and container-based architectures
+
+The primary decision your organization will need to make is what combination of serverless computing
+and containers – two of the most common techniques for microservices implementation – to leverage.
+We recommend that you look at each of the applications you’d like to modernize, and then decide
+based on their collective needs.
+
+
+Containers
+
+Containers are an architectural approach where application components are still separate, smaller pieces, but they share some resources—most importantly, a single operating system instance. This makes them more lightweight than traditional virtual machines. They tend to be a better fit for complex applications that have a lot of components that need to run simultaneously, such as an e-commerce site. Often times, legacy apps that have run on-premises for years are more easily migrated to AWS using a container-based architecture than a serverless architecture.
+
+
+Serverless
+
+Serverless architectures provision compute resources in response to events, keep that capacity running until a task is completed, and then de-provision the compute resource. They’re often better for apps that perform tasks that don’t always need to be running. An IoT app that detects when an engine has moved outside of acceptable operating parameters provides a good example. Or a retail app that detects when stock of a certain product is low and orders more from the warehouse.
+
+
+
+Impart the proper cultural changes
+
+As mentioned previously, some organizational changes will be required to make the transition
+to microservices successful.
+One of the most important things to do is to implement fairly comprehensive logging and monitoring.
+Because your applications have more individual components than with a monolithic architecture, it can be easy to overlook some of them. By taking the time to ensure that you have monitoring goals, are storing log files, and using monitoring services in accordance with those goals, you can keep your application secured and functioning properly. Things to think about in any plan for monitoring include:
+
+1.What resources will you monitor?
+2.How often will you monitor these resources?
+3.What monitoring tools will you use?
+4.Who will perform the monitoring tasks?
+5.Who should be notified when something goes wrong?
+
+Another organizational change that is typically required is the adoption of a mindset that security is
+everyone’s job. For a long time, developers were primarily focused on functionality, and once their features were baked into the application, they’d hand it off to someone else to implement the security components. That will simply not work in a microservices architecture. Everyone needs to have a stake in security, and it needs to be factored into every decision that is made about how the applications are built and updated.
+
+
+What does AWS provide to support microservices?
+
+If you’re looking to implement a microservices architecture, Amazon Web Services (AWS) and AWS Partner Network (APN) Partners offer a comprehensive set of pay-as-you-go services that can simplify that process.
+
+Compute
+
+If you’re looking to implement serverless computing, AWS Lambda, a service that runs code in response to events is a logical choice. For containers, a variety of compute services are available as well, including self-managed and AWS managed options for Kubernetes.
+
+Networking
+
+AWS networking services provide high-throughput and sub-millisecond latency. This includes services for API based communication, which is critical for microservices architectures, as well as load balancing, domain name systems, and more.
+
+Messaging
+
+To assist with proper inter-process communication, AWS messaging services publish and coordinate activities between all the pieces of a microservices architecture. These services span both message publishing and subscription, as well as message queuing.
+
+
+Logging and Monitoring
+
+As we mentioned before, being more thoughtful about logging and monitoring is one of the biggest changes organizations typically have to make as part of this transition. AWS makes it easy to store and analyze log files from each service, as well as collect metrics, set alarms, and view requests from end-to-end as they travel through application components.
+
+Storage/ Databases
+
+Scalable, durable, and secure storage and databases allow you to easily retain the data needed for your microservices-based apps. AWS provides several storage options with varying retrieval times, allowing you to cost-effectively store your data in the way that you see fit. Support for both open source and commercial databases, both self-managed and as a managed service, give you database flexibility. 
+
+
+
+
+
+
+
+Benefits of microservices on AWS
+
+Agility
+
+Because the team for each app component can be smaller and more independently, they have the power to make changes and release new features without clearing as many procedural hurdles. Often, the aggregate throughput of all the teams in an organization running microservices is significantly higher than when those teams acted as one giant unit.
+
+Flexible scaling
+
+As mentioned before, each component within a microservices-based application has the ability to scale up and down as needed without impacting the other components. This typically makes applications more stable while better aligning your infrastructure capacity to your actual needs, reducing costs.
+
+
+Easy deployment
+
+Monolithic apps were often built under the premise that they were never supposed to fail and making them simple to deploy was not a priority. The reality, however, is that all applications will fail at some point—it’s simply inevitable. If apps are not designed to be deployed easily when they do fail, the result is problematic downtime. Microservices allow you to easily and repeatedly deploy applications, enabling continuous integration and continuous delivery. This makes it simpler for your team to try out new ideas and to roll back if something doesn’t work. The low cost of failure
+enables experimentation, makes it easier to update code, and accelerates time-to-market for new features.
+
+
+
+
+
+
+

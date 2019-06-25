@@ -1,0 +1,86 @@
+
+ECommerce Application
+
+EStore
+	Functional Requirements
+
+		UseCase---- Module
+			1.Product Catalog
+			2.Inventory
+			3.Shopping Cart
+			4.Order Processing
+			5.Payment , Billing
+			6.Shipment
+			7.CRM
+
+	Non Functional Requirements
+		1.Performance – 
+			for example Response Time, Throughput, 				Utilization, Static Volumetric.
+		2.Scalability.
+		3.Capacity.
+		4.Availability.
+		5.Reliability.
+		6.Recoverability.
+		7.Maintainability.
+		8.Serviceability.
+
+
+
+Flow of  Events for user case  Product Catalog
+
+	1.End user  will get  Products List.
+	2.User will select the product fomr product List
+	3.User will get Product details
+	4.User will add product in to cart
+
+
+
+Object Oriented Way
+
+1.Object diagrams
+	
+	Enduser : 
+		 state 
+		 behaviour 
+		 Role 
+
+2.Class Diagrams
+3.Activity Diagrams
+4.State Transition Diagrams
+5.Deployment Diagrams
+
+
+Service Oriented Architecture
+1.Identify Reusable services from Use cases
+2.Use Model View Controller Design Pattern
+3.Based on Request Response Model
+4.Understand Flow of Events defined from use cases in UML
+5.Identify nonun and verbs from flow of events statements
+6.Identity actions and Models, Request and response 
+7.Define Controller 
+8.List of URL Request patterns such as 
+
+  http://localhost/products/list
+  http://lolcahost/products/details/23
+  http://localhost/customers/index
+  http://localhost/customers/details/45
+  ......
+  ......
+  etc.
+
+9.Write the logic for action methods of Controller to fulfil  Requirement using procedural way (functions and variables)
+ or 
+ Object oriented way  (Classes and objects)
+
+10.Develop Solution using Programming and logic of ECommerce
+
+
+
+
+
+
+
+
+
+
+

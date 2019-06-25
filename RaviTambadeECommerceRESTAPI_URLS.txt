@@ -1,0 +1,8 @@
+
+To access microservices of ECommerce Application of Ravi Tambade on your machine
+Type following urls in your borwser 
+
+
+http://35.200.165.78:8088/customers
+http://35.200.165.78:8088/orders
+http://35.200.165.78:8088/products
